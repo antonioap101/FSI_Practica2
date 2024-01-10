@@ -12,6 +12,9 @@ The main goal is to train a neural network and graphically visualize the accurac
 
 Por supuesto, aquí tienes el texto actualizado en inglés:
 
+## 🚀 Getting Started
+To begin working with this project, ensure you have the required Python libraries installed, including TensorFlow, Keras, and relevant data processing libraries. Refer to the provided Jupyter notebooks for detailed implementation and further instructions on training the models with the datasets.
+
 ## 📊 Datasets
 The practice was conducted with two distinct datasets: one consisting of Butterfly and Moth species, and another comprising Euro coins. Below are the categories for each dataset:
 
@@ -48,12 +51,66 @@ If you would like to get more details about the structure and content of each da
 ## 💻 Implementation
 Throughout the project, various techniques and strategies in neural network construction and optimization are employed. The use of Keras and TensorFlow frameworks facilitates the model-building process. Early stopping is one such strategy to prevent overfitting and to ensure the model generalizes well to unseen data.
 
-## 🚀 Getting Started
-To begin working with this project, ensure you have the required Python libraries installed, including TensorFlow, Keras, and relevant data processing libraries. Refer to the provided Jupyter notebooks for detailed implementation and further instructions on training the models with the datasets.
+### Model Architecture
+The neural networks developed for this project is a convolutional neural network (CNN) using TensorFlow and Keras. The model architecture includes:
+- **Convolutional Layers**: To extract features from the images.
+- **Pooling Layers**: To reduce the dimensionality of the feature maps.
+- **Fully Connected Layers**: To interpret the features extracted by the convolutional and pooling layers.
+
+### Data Preprocessing
+- **Data Loading**: The images are loaded into the model using Keras' `image_dataset_from_directory` function.
+- **Data Augmentation**: To increase the diversity of the dataset, augmentations like rotation, zoom, and flip are applied.
+
+### Model Compilation
+- **Optimizer**: Adam optimizer with a learning rate of 1e-3.
+- **Loss Function**: Categorical cross-entropy, suitable for multi-class classification.
+
+### Model Training
+- **Early Stopping**: Implemented to prevent overfitting by monitoring the validation accuracy.
+- **Epochs**: The model is trained for a specific number of epochs, with early stopping dictating the actual number of epochs executed based on model performance.
+
+### Performance Evaluation
+- **Metrics**: Accuracy, precision, recall, and F1-score are used to evaluate the model.
+- **Visualization**: Confusion matrices and performance graphs are generated to visually represent the model’s performance.
+
+### Specific Model Details
+- **Global Average Pooling**: Applied after the feature extraction layers to reduce the feature map size.
+- **Dense Layer**: A fully connected layer with 256 neurons and ReLU activation.
+
+
+## 🛠️ Fine-Tuning
+
+In addition to the initial model, fine-tuning has been implemented using VGG16, VGG19, and ResNet50 to enhance classification performance.
+
+### VGG16
+Fine-tuning with VGG16 involves:
+- Loading the pre-trained VGG16 model on ImageNet data.
+- Setting the base model to be non-trainable to retain pre-trained weights.
+- Adding custom layers, including a Global Average Pooling layer and a Dense layer, to tailor the model for classification into 8 classes.
+- Compiling and training the model with the training and validation datasets.
+
+### VGG19
+The fine-tuning process with VGG19 follows similar steps:
+- Using the pre-trained VGG19 model as a base.
+- Setting the base model as non-trainable.
+- Adding custom layers for classification.
+- Training the model and evaluating its performance.
+
+### ResNet50
+Fine-tuning with ResNet50 also follows a similar approach:
+- Loading the pre-trained ResNet50 model.
+- Setting the base model as non-trainable.
+- Incorporating additional layers to tailor the model to the specific task.
+- Training and evaluating the model on the datasets.
+
+Each of these models is evaluated in terms of accuracy, precision, recall, and F1-score, using confusion matrices and performance graphs for a clear visual representation of the results.
+### Results and Outcomes
+The final model demonstrates high accuracy in classifying both the butterfly and moth species and the Euro-coins. The results are detailed in a classification report showcasing the precision, recall, and F1-score for each category.
+
+
 
 ## 🏁 Conclusion
 The project offers hands-on experience with neural networks and image classification. It provides a practical understanding of the model training process, the significance of hyperparameter tuning, and the application of data augmentation to improve model generalization.
 
 ---
 
-Make sure to update the README with any specific instructions on how to run the notebooks or any dependencies that need to be installed beforehand.
