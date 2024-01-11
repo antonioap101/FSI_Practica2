@@ -160,7 +160,13 @@ Each of these models is evaluated in terms of accuracy, precision, recall, and F
 The final model demonstrates high accuracy in classifying both the butterfly and moth species and the Euro-coins. The results are detailed in a classification report showcasing the precision, recall, and F1-score for each category.
 
 ## 🏁 Conclusion
-The project offers hands-on experience with neural networks and image classification. It provides a practical understanding of the model training process, the significance of hyperparameter tuning, and the application of data augmentation to improve model generalization. The EuroCoinClassifier model exhibits excellent generalization capabilities, as shown by the convergence of training and validation accuracy. The performance graphs indicate that the model's accuracy stabilizes above 80%, with training and validation losses closely aligned, confirming the model's ability to generalize beyond the training data without overfitting. These results validate the effectiveness of the chosen model architecture and hyperparameters in accurately classifying different denominations of Euro coins.
+The project offers hands-on experience with neural networks and image classification. It provides a practical understanding of the model training process, the significance of hyperparameter tuning, and the application of data augmentation to improve model generalization. 
+
+The EuroCoinClassifier and BytterflyMothClassifier models exhibit great generalization capabilities, as shown by the convergence of training and validation accuracy.
+
+ The performance graphs indicate that the model's accuracy stabilizes above 80%, with training and validation losses closely aligned, confirming the model's ability to generalize beyond the training data without overfitting. 
+ 
+ These results validate the effectiveness of the chosen model architecture and hyperparameters in accurately classifying different denominations of Euro coins, Butterflies and Moths.
 
 ---
 
