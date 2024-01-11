@@ -91,12 +91,43 @@ The model's performance, as visualized in the graphs, indicates a successful tra
 
 ![Confusion-Matrix for Coin-Classifier model](./assets/coins_model_conf_matrix.png)
 
+The confusion matrix for the EuroCoinClassifier indicates high predictive accuracy, particularly with 1 euro, 2 euro and 5 cents coins, demonstrating the model's robustness. 
+
+However, some confusion is observed between coins of similar sizes, such as 20 cents being occasionally misclassified as 50 cents and 10 cents. The 10 cents denomination also shows notable confusion with the 50 cent and 20 cent coins. 
+
+These insights point to a need for further fine-tuning, possibly by improving feature extraction and dataset image resolution to better distinguish between coins with subtle differences.
+
+Overall, the model's performance is promising, showcasing its potential for accurate real-world application in coin recognition tasks.
+
+
+### 🦋 Butterfly and Moth Classifier Charts
+
+
+![Results for Coin-Classifier model](./assets/butterfly_results_model.png)
+
+![Results for Coin-Classifier model](./assets/butterfly_results2_model.png)
 
 ### 🦋 Butterfly and Moth Classifier Confusion-Matrix
 
-![Confusion-Matrix for Coin-Classifier model](./assets/butterfly_model_conf_matrix.png)
+![Confusion-Matrix for Butterfly-Classifier model](./assets/butterfly_model_conf_matrix.png)
 
-The confusion matrix for the EuroCoinClassifier indicates high predictive accuracy, particularly with 1 euro and 5 cents coins, demonstrating the model's robustness. However, some confusion is observed between coins of similar sizes, such as 20 cents being occasionally misclassified as 50 cents. The 10 cents denomination also shows notable confusion with the 1 and 2 euros coins. These insights point to a need for further fine-tuning, possibly by improving feature extraction to better distinguish between coins with subtle differences. Overall, the model's performance is promising, showcasing its potential for accurate real-world application in coin recognition tasks.
+The primary diagonal entries represent the number of correct predictions for each class, indicating strong performance for classes like 'AN 88', 'ATALA', and 'MOURNING CLOAK', where the model predictions align well with the actual labels. 
+
+Misclassifications are minimal, with only a few instances where the model confuses one class for another, such as a few cases of 'MOURNING CLOAK' being classified as 'ATALA' or 'SLEEPY ORANGE' being mistaken for 'ZEBRA LONG WING'. 
+
+Overall, the model demonstrates a high degree of accuracy, but the slight misclassifications provide opportunities for further fine-tuning.
+
+### 🦋💰 Combined Butterfly-Moth and Euro-Coin Classifier Charts 
+
+![Results for Combined-Classifier model](./assets/combined_results_model.png)
+
+![Results for Combined-Classifier model](./assets/combined_results2_model.png)
+
+
+### 🦋💰 Combined Butterfly-Moth and Euro-Coin Classifier Confusion-Matrix
+
+
+![Confusion-Matrix for Combined-Classifier model](./assets/combined_model_conf_matrix.png)
 
 ## 🛠️ Fine-Tuning
 
@@ -127,12 +158,6 @@ Each of these models is evaluated in terms of accuracy, precision, recall, and F
 
 ### 📈 Results and Outcomes
 The final model demonstrates high accuracy in classifying both the butterfly and moth species and the Euro-coins. The results are detailed in a classification report showcasing the precision, recall, and F1-score for each category.
-
-### 💰 Euro-Coin Classifier
-
-### 🦋 Butterfly and Moth Classifier
-
-
 
 ## 🏁 Conclusion
 The project offers hands-on experience with neural networks and image classification. It provides a practical understanding of the model training process, the significance of hyperparameter tuning, and the application of data augmentation to improve model generalization. The EuroCoinClassifier model exhibits excellent generalization capabilities, as shown by the convergence of training and validation accuracy. The performance graphs indicate that the model's accuracy stabilizes above 80%, with training and validation losses closely aligned, confirming the model's ability to generalize beyond the training data without overfitting. These results validate the effectiveness of the chosen model architecture and hyperparameters in accurately classifying different denominations of Euro coins.
