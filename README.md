@@ -1,4 +1,4 @@
-# FSI Practice 2: Neural Network Image Classification 
+# Neural Network for Image Classification 
 
 ## 📋 Overview
 This project involves the development of a neural network to classify a collection of images. Students have the flexibility to create their own dataset by capturing photos of different objects under varying locations and conditions. Example categories include books, kitchen utensils, coins, clothing items, toilet rolls, etc. The recommended number of distinct classes ranges from 4 to 7, with each class containing at least 20 images for training and 5 for validation.
